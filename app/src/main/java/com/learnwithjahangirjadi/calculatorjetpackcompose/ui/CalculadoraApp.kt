@@ -1,7 +1,5 @@
 package com.learnwithjahangirjadi.calculatorjetpackcompose.ui
 
-import alternarSinal
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -16,7 +14,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import delCharacter
-import handlePercentage
 import solveExpression
 
 @Composable
@@ -88,7 +85,7 @@ fun CalculatorScreen(modifier: Modifier = Modifier) {
             Row(modifier = modifier.fillMaxWidth()) {
                 CalculatorButton(isFunction = true, text = "+/-", modifier = modifier.weight(1f),
                     onClick = {
-                        expression = alternarSinal(expression)
+                        expression = "(-$expression"
                     })
                 CalculatorButton(isFunction = true, text = "√", modifier = modifier.weight(1f),
                     onClick = {
@@ -96,7 +93,7 @@ fun CalculatorScreen(modifier: Modifier = Modifier) {
                     })
                 CalculatorButton(isFunction = true, text = "%", modifier = modifier.weight(1f),
                     onClick = {
-                        expression = handlePercentage(expression)
+                        expression = "$expression/100*100"
                     })
                 CalculatorButton(isFunction = true, text = "÷", modifier = modifier.weight(1f),
                     onClick = {

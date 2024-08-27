@@ -3,7 +3,6 @@ import org.mariuszgromada.math.mxparser.Expression
 fun solveExpression(expression: String): String {
     // Adiciona parênteses aos números negativos e converte porcentagens
     val modifiedExpression = expression
-        .replace(Regex("(?<!\\d|\\))(-\\d+(?:\\.\\d+)?)")) { "($it)" }
         .replace("÷", "/")
         .replace("×", "*")
 

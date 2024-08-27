@@ -43,7 +43,7 @@ fun CalculatorScreen(modifier: Modifier = Modifier) {
                 text = expression,
                 style = TextStyle(
                     fontSize = 40.sp,
-                    color = MaterialTheme.colorScheme.primary, // Updated to onBackground for text color
+                    color = MaterialTheme.colorScheme.primaryContainer, // Updated to onBackground for text color
                     textAlign = TextAlign.End
                 ),
                 maxLines = 3
@@ -56,7 +56,7 @@ fun CalculatorScreen(modifier: Modifier = Modifier) {
                 text = result,
                 style = TextStyle(
                     fontSize = 48.sp,
-                    color = MaterialTheme.colorScheme.primary, // Updated to onBackground for text color
+                    color = MaterialTheme.colorScheme.primaryContainer, // Updated to onBackground for text color
                     textAlign = TextAlign.End
                 )
             )
